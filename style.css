@@ -1,0 +1,376 @@
+.container
+{
+    background-color: aqua;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+   
+}
+.box
+{
+   display: flex;
+    flex-direction: column;
+   align-items: center;
+    justify-content: space-around;
+    margin-top: 50px;
+    height: 70vh;
+    width: 15vw;
+    background-color: rgb(44, 43, 43);
+    border: 8px solid white;
+    border-radius: 20px;
+}
+.stand
+{
+    width: 5vw;
+    height: 20vh;
+    background-color: white;
+    position: relative;
+    top: 510px;
+    right: 138px;
+}
+.red
+{
+    width: 100px;
+    height: 100px;
+    background-color: black;
+    border-radius: 50px;
+    box-shadow: -0px -8px black;
+    position: relative;
+    
+}
+.red:before
+{
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    animation: 5s red-signal infinite;
+   
+}
+@keyframes red-signal{
+   
+    25%
+    {
+        opacity: .5; 
+        background-color: red;
+    
+    }
+    55%
+    {
+        opacity: .7;
+        background-color: black;
+   
+    }
+
+   
+  
+    
+  }
+.yellow
+{
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    box-shadow: -0px -8px black;
+    
+}
+.yellow:before
+{
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    
+    animation: 5s yellow-signal infinite;
+    
+}
+@keyframes yellow-signal{
+  55%
+    {
+        opacity: .5; 
+        background-color: yellow;
+    
+    }
+    80%
+    {
+        opacity: .7;
+        background-color: black;
+   
+    }
+
+  }
+.green
+{
+    width: 100px;
+    height: 100px;
+    
+    border-radius: 50px;
+    box-shadow: -0px -8px black;
+}
+.green:before
+{
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+   
+    animation: 5s green-signal infinite;
+    
+}
+@keyframes green-signal{
+    80%
+    {
+        opacity: .5; 
+        background-color: green;
+    
+    }
+    35%
+    {
+        opacity: .7;
+        background-color: black;
+   
+    }
+
+  }
+  
+
+
+.container-2
+{
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+}
+
+.card 
+{
+    width: 100px; 
+    height: 100px;
+    background-color: red;
+    position: relative;
+    transition: all 1s ease-in-out;  
+}
+.card-2
+{
+    width: 100px; 
+    height: 100px;
+    background-color: red;
+    position: relative;
+    animation: slide 10s infinite;   
+}
+@keyframes slide
+{
+    0%{
+        transform: translateX(-640px);
+        background-color: turquoise;
+    }
+    25%{
+        transform: translate(540px);
+        background-color: yellow;
+    }
+    50%{
+        transform: translate(-640px);
+        background-color: orange;
+    }
+    75%{
+        transform: translateX(540px);
+        background-color: palevioletred;
+    }
+    100%{
+        transform: translateX(-640px);
+        background-color: rebeccapurple;
+    }
+}
+
+.container-3
+{
+    margin-top: 250px;
+    display: flex;
+    justify-content: center;
+    
+}
+@keyframes beat
+{
+    0%{
+        
+        transform: rotate(45deg) scale(1);
+    }
+    25%{
+        
+        transform: rotate(45deg) scale(1.4);
+    }
+    50%{
+       
+        transform: rotate(45deg) scale(1.2);
+    }
+    75%{
+        
+        transform: rotate(45deg) scale(1.4);
+    }
+    100%{
+       
+        transform:  rotate(45deg) scale(1);
+    }
+}
+.box1
+{
+    height: 110px;
+    width: 110px;
+    background-color: red;
+    position: relative;
+    top: -47px;
+    left: 63px;
+    border-radius: 100%;
+    animation: beat 5s infinite;
+}
+
+.box2
+{
+    height: 110px;
+    width: 110px;
+    background-color: red;
+    transform: rotate(45deg);
+    animation: beat 5s infinite;
+}
+
+.box3
+{
+    height: 110px;
+    width: 110px;
+    background-color: red;
+    position: relative;
+    top: -47px;
+    right: 63px;
+    border-radius: 100%;
+    animation: beat 5s infinite;
+}
+ 
+.design
+{
+    width: 40px;
+    height: 40px;
+    border: 15px solid aqua;
+    border-radius: 100%;
+    position: relative;
+    top: -50px;
+    left: 150px;
+}
+.timer-box
+{
+    width: 200px;
+    height: 200px;
+    border: 20px solid aqua;
+    border-radius: 100%;
+    animation: needle-rotate 2s linear infinite;
+}
+.pin
+{
+    left: 0px;
+    width: 20px;
+    height: 20px;
+    background-color: aqua;
+    border-radius: 100%;
+    position: relative;
+    left: 100px;
+    top: 100px;
+}
+.needle
+{
+    width: 10px;
+    height: 80px;
+    background-color: aqua;
+    position: relative;
+    left: 100px;
+    top: 15px;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    border-top-right-radius:50px ;
+    border-top-left-radius: 50px;
+
+}
+.timer-box:hover
+{
+    animation-play-state: paused;
+}
+
+
+ @keyframes needle-rotate
+{
+    0%
+    {
+       transform: rotate(0deg);
+    }
+    
+    100%
+    {
+        transform: rotate(360deg);
+    }
+} 
+ 
+
+.container-4
+{
+    margin-top: 250px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+.hill-1 {
+    width: 0px;
+    height: 0px;
+    border-left:300px solid transparent;
+    border-right: 300px solid transparent;
+    border-bottom: 300px solid red;
+    margin-left: -10px;
+  }
+  .hill-2 {
+    width: 0px;
+    height: 0px;
+    border-left:150px solid transparent;
+    border-right: 150px solid transparent;
+    border-bottom: 200px solid red;
+    position: absolute;
+    left: 500px;
+    top: 100px;
+  }
+  .hill-3 {
+    width: 0px;
+    height: 0px;
+    border-left:300px solid transparent;
+    border-right: 300px solid transparent;
+    border-bottom: 300px solid red;
+   margin-left: -180px;
+   
+  }
+
+  .sun
+  {
+      width: 100px;
+      height: 100px;
+      background-color: yellow;
+      border-radius: 50%;
+      animation: sunrise_sunset 5s infinite;
+
+  }
+  @keyframes sunrise_sunset
+  {
+      0%
+      {
+          transform: translateY(200px);
+          background-color: red;
+      }
+      30%
+      {
+          transform: translateY(-200px);
+
+      }
+      /* 70%
+      {
+          transform: translateY(500px);
+          background-color: turquoise;
+      } */
+    
+  }
