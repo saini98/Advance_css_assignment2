@@ -3,14 +3,13 @@
     background-color: aqua;
     display: flex;
     justify-content: center;
-    height: 100vh;
-   
+    height: 100vh;  
 }
 .box
 {
-   display: flex;
+    display: flex;
     flex-direction: column;
-   align-items: center;
+    align-items: center;
     justify-content: space-around;
     margin-top: 50px;
     height: 70vh;
@@ -82,18 +81,18 @@
     width: 100px;
     height: 100px;
     border-radius: 50px;
-    
+
     animation: 5s yellow-signal infinite;
     
 }
 @keyframes yellow-signal{
-  55%
+  65%
     {
         opacity: .5; 
         background-color: yellow;
     
     }
-    80%
+    85%
     {
         opacity: .7;
         background-color: black;
@@ -268,14 +267,15 @@
 }
 .pin
 {
-    left: 0px;
-    width: 20px;
-    height: 20px;
+    
+    width: 5px;
+    height: 5px;
     background-color: aqua;
-    border-radius: 100%;
-    position: relative;
-    left: 100px;
-    top: 100px;
+    border: 12px solid aquamarine;
+    border-radius: 50%;
+    position: absolute;
+    left: 90px;
+    top: 80px;
 }
 .needle
 {
@@ -313,7 +313,7 @@
 
 .container-4
 {
-    margin-top: 250px;
+    margin-top: 550px;
     display: flex;
     justify-content: center;
     position: relative;
@@ -323,7 +323,7 @@
     height: 0px;
     border-left:300px solid transparent;
     border-right: 300px solid transparent;
-    border-bottom: 300px solid red;
+    border-bottom: 300px solid rgb(0, 60, 255);
     margin-left: -10px;
   }
   .hill-2 {
@@ -331,7 +331,7 @@
     height: 0px;
     border-left:150px solid transparent;
     border-right: 150px solid transparent;
-    border-bottom: 200px solid red;
+    border-bottom: 200px solid rgb(0, 60, 255);
     position: absolute;
     left: 500px;
     top: 100px;
@@ -341,7 +341,7 @@
     height: 0px;
     border-left:300px solid transparent;
     border-right: 300px solid transparent;
-    border-bottom: 300px solid red;
+    border-bottom: 300px solid rgb(0, 60, 255);
    margin-left: -180px;
    
   }
@@ -352,7 +352,7 @@
       height: 100px;
       background-color: yellow;
       border-radius: 50%;
-      animation: sunrise_sunset 5s infinite;
+      animation: sunrise_sunset 10s infinite;
 
   }
   @keyframes sunrise_sunset
@@ -362,15 +362,96 @@
           transform: translateY(200px);
           background-color: red;
       }
-      30%
+      50%
       {
-          transform: translateY(-200px);
+          transform: translateY(-500px);
+          background-color: orange;
 
       }
+      70%
+      {
+        transform: translateY(100px);
+        
+      }
+      100%
+      {
+        transform: translateY(30px);
+        background-color: transparent;
+      }
+      
       /* 70%
       {
           transform: translateY(500px);
           background-color: turquoise;
       } */
     
+  }
+  .cloud
+  {
+      width: 100px;
+      height: 100px;
+      background-color: lightblue;
+      border-top-right-radius: 50%;
+      border-top-left-radius: 50%;
+      border-bottom-left-radius: 50%;
+      position: relative;
+      
+  }
+  .cloud:before
+  {
+      content: '';
+      height: 120px;
+      width: 100px;
+      background-color: lightblue;
+      position: absolute;
+      left: 50px;
+      top:-20px;
+      border-top-right-radius: 50%;
+      border-top-left-radius: 50%;
+  }
+  .cloud:after
+  {
+      content: '';
+      height: 100px;
+      width: 100px;
+      background-color: lightblue;
+      position: absolute;
+      left: 110px;
+      top: 0px;
+      border-top-right-radius: 50%;
+      border-top-left-radius: 50%;
+      border-bottom-right-radius: 50%;
+      
+  }
+  @keyframes clouds
+  {
+    0%
+    {
+        transform: translateX(40px);
+        
+    }
+
+    100%
+    {
+        transform: translateX(-900px);
+    }
+ }
+  
+  .cloud-1
+  {
+    animation: clouds 8s linear infinite;   
+  }
+  .cloud-2
+  {
+      position: absolute;
+      left: 1000px;
+      top: -250px;
+      animation: clouds 6s linear infinite;   
+  }
+  .cloud-3
+  {
+    position: absolute;
+    left: 600px;
+    top: -100px;
+    animation: clouds 5s linear infinite;   
   }
